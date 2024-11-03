@@ -10,7 +10,7 @@ package com.mycompany.csc325_oop_designreview_lab;
  */
 public abstract class Human {
     private String name;
-	private String address;
+	protected String address;
 	private short age;
 
 	// constructor that takes only two paras
@@ -31,6 +31,11 @@ public abstract class Human {
 
 	public abstract void setAddress(String address);
 
+
+	@Override
+	public String toString() {
+		return "name=" + name + "||" + " address=" + address + "||" + " age=" + age;
+	}
 
 	public short getAge() {
 		return age;
